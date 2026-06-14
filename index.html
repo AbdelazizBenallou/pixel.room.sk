@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="fr" data-bs-theme="light" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pixel Room | SALSABIL DESIGN</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- ===== FLOATING NAVBAR ===== -->
+  <nav class="navbar floating-navbar navbar-expand-lg" id="mainNavbar">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img class="brand-logo" src="images/1.png" alt="Pixel Room" width="35" height="52">
+        <span>Pixel Room</span>
+      </a>
+
+      <ul class="navbar-nav mx-auto d-none d-lg-flex gap-1" id="navLinks">
+        <li class="nav-item"><a class="nav-link active" href="#hero" data-i18n="nav_home">Accueil</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about" data-i18n="nav_about">À propos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills" data-i18n="nav_skills">Compétences</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services" data-i18n="nav_services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="projects.html" data-i18n="nav_work">Projets</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="nav_contact">Contact</a></li>
+      </ul>
+
+      <div class="d-flex align-items-center gap-2">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">
+          <i class="bi bi-sun-fill"></i>
+        </button>
+        <button class="lang-btn" id="langToggle" aria-label="Toggle language">AR</button>
+        <button class="icon-btn d-lg-none" id="menuToggle" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#mobileMenu" aria-label="Toggle menu">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== OFFCANVAS DRAWER ===== -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="mobileMenuLabel">Pixel Room<br></h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <ul class="nav flex-column gap-2 mb-4">
+        <li class="nav-item"><a class="nav-link mobile-link active" href="#hero" data-i18n="nav_home">Accueil</a></li>
+        <li class="nav-item"><a class="nav-link mobile-link" href="#about" data-i18n="nav_about">À propos</a></li>
+        <li class="nav-item"><a class="nav-link mobile-link" href="#skills" data-i18n="nav_skills">Compétences</a></li>
+        <li class="nav-item"><a class="nav-link mobile-link" href="#services" data-i18n="nav_services">Services</a></li>
+        <li class="nav-item"><a class="nav-link mobile-link" href="projects.html"
+            data-i18n="nav_work">Projets</a></li>
+        <li class="nav-item"><a class="nav-link mobile-link" href="#contact" data-i18n="nav_contact">Contact</a></li>
+      </ul>
+      <div class="mt-auto">
+        <div class="d-flex gap-3 mb-3">
+          <button class="icon-btn lg" id="mobileThemeToggle">
+            <i class="bi bi-sun-fill"></i>
+          </button>
+          <button class="lang-btn" id="mobileLangToggle">AR</button>
+        </div>
+        <div class="drawer-social">
+          <a href="https://www.instagram.com/pixel.room.s?igsh=MWlydzZmbmZveTllbg==" target="_blank" class="drawer-social-link"
+            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/share/1JdRksztov" target="_blank" class="drawer-social-link"
+            aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://wa.me/212676453148" target="_blank" class="drawer-social-link"
+            aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://t.me/salsabil_design" target="_blank" class="drawer-social-link"
+            aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+          <a href="https://www.linkedin.com/company/pixelroom-sk/" target="_blank" class="drawer-social-link"
+            aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero" class="hero-section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="hero-content">
+            <span class="badge bg-pink-subtle text-pink mb-3 px-3 py-2 fs-6" data-i18n="hero_badge">Identité visuelle ·
+              Web · Print</span>
+            <h1 class="hero-title">
+              <span data-i18n="hero_title_1">Votre Image,</span><br />
+              <span class="text-pink" data-i18n="hero_title_2">Notre Passion</span>
+            </h1>
+            <p class="hero-subtitle" data-i18n="hero_subtitle">
+              Salsabil Design vous accompagne dans la création de supports visuels professionnels, numériques et
+              imprimés, adaptés à votre image de marque et à vos objectifs.
+            </p>
+            <div class="d-flex gap-3 flex-wrap">
+              <a href="projects.html" class="btn btn-pink btn-lg" data-i18n="hero_btn_work">Voir nos réalisations</a>
+              <a href="#contact" class="btn btn-outline-pink btn-lg" data-i18n="hero_btn_contact">Contactez-nous</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="hero-visual">
+            <!-- Decorative connecting lines -->
+            <svg class="hero-lines" viewBox="0 0 400 400" fill="none">
+              <circle cx="200" cy="200" r="120" stroke="var(--bs-pink)" stroke-width="1" opacity="0.15" />
+              <circle cx="200" cy="200" r="160" stroke="var(--bs-pink)" stroke-width="0.5" opacity="0.08"
+                stroke-dasharray="8 8" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-bubbles">
+      <!-- Large bubbles -->
+      <div class="bubble"
+        style="width: 80px; height: 80px; top: -5%; left: -3%; animation-delay: 0s; animation-duration: 8s; opacity: 0.06;">
+      </div>
+      <div class="bubble"
+        style="width: 120px; height: 120px; bottom: -8%; right: -4%; animation-delay: 1s; animation-duration: 10s; opacity: 0.04;">
+      </div>
+      <div class="bubble"
+        style="width: 60px; height: 60px; top: 40%; right: -2%; animation-delay: 2s; animation-duration: 7s; opacity: 0.06;">
+      </div>
+      <div class="bubble"
+        style="width: 100px; height: 100px; top: 20%; left: -5%; animation-delay: 0.5s; animation-duration: 9s; opacity: 0.05;">
+      </div>
+      <div class="bubble"
+        style="width: 50px; height: 50px; bottom: 30%; left: -2%; animation-delay: 1.5s; animation-duration: 6s; opacity: 0.07;">
+      </div>
+      <!-- Small bubbles -->
+      <div class="bubble"
+        style="width: 18px; height: 18px; top: 15%; left: 8%; animation-delay: 0s; animation-duration: 4s;"></div>
+      <div class="bubble"
+        style="width: 12px; height: 12px; top: 30%; left: 3%; animation-delay: 1s; animation-duration: 5s;"></div>
+      <div class="bubble"
+        style="width: 22px; height: 22px; top: 60%; left: 6%; animation-delay: 0.5s; animation-duration: 6s;"></div>
+      <div class="bubble"
+        style="width: 10px; height: 10px; top: 80%; left: 12%; animation-delay: 2s; animation-duration: 3.5s;"></div>
+      <div class="bubble"
+        style="width: 16px; height: 16px; top: 10%; right: 5%; animation-delay: 1.5s; animation-duration: 4.5s;"></div>
+      <div class="bubble"
+        style="width: 14px; height: 14px; top: 45%; right: 3%; animation-delay: 0.8s; animation-duration: 5.5s;"></div>
+      <div class="bubble"
+        style="width: 20px; height: 20px; top: 70%; right: 8%; animation-delay: 2.5s; animation-duration: 4s;"></div>
+      <div class="bubble"
+        style="width: 8px; height: 8px; top: 25%; left: 45%; animation-delay: 3s; animation-duration: 3s;"></div>
+      <div class="bubble"
+        style="width: 15px; height: 15px; top: 55%; right: 40%; animation-delay: 1.2s; animation-duration: 5s;"></div>
+      <div class="bubble"
+        style="width: 11px; height: 11px; top: 85%; left: 50%; animation-delay: 0.3s; animation-duration: 4.2s;"></div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <span class="badge bg-pink-subtle text-pink mb-3 px-3 py-2" data-i18n="about_badge">À propos</span>
+          <h2 class="section-title">
+            <span data-i18n="about_title_before">Là où les pixels </span>
+            <span class="text-pink" data-i18n="about_title_span">prennent vie</span>
+          </h2>
+          <p class="section-text" data-i18n="about_p1">
+            Je suis Salsabil, fondatrice de Salsabil Design, un univers créatif dédié à la conception de supports
+            visuels qui allient esthétique, stratégie et authenticité.
+            Spécialisée dans le Social Media Design, l'identité visuelle et les présentations PowerPoint
+            professionnelles, j'aide les marques et les entrepreneurs à construire une image forte et cohérente à
+            travers des créations sur mesure.
+            À travers chaque projet, mon ambition est de donner vie à des designs qui captent l'attention, transmettent
+            un message clair et laissent une impression durable. 💜
+          </p>
+          <a href="#services" class="btn btn-pink" data-i18n="about_btn">Explorer</a>
+        </div>
+        <div class="col-lg-6">
+          <div class="about-visual">
+            <div class="about-vcard about-vc-1 entrance" style="top: 0; left: 8%;">
+              <i class="bi bi-people"></i>
+              <span data-i18n="about_label_1">Particuliers</span>
+            </div>
+            <div class="about-vcard about-vc-2 entrance" style="top: 5%; right: 10%;">
+              <i class="bi bi-briefcase"></i>
+              <span data-i18n="about_label_2">Professionnels</span>
+            </div>
+            <div class="about-vcard about-vc-3 entrance" style="top: 38%; left: 2%;">
+              <i class="bi bi-palette"></i>
+              <span data-i18n="about_label_3">Branding</span>
+            </div>
+            <div class="about-vcard about-vc-4 entrance" style="top: 35%; right: 5%;">
+              <i class="bi bi-share"></i>
+              <span data-i18n="about_label_4">Social Média</span>
+            </div>
+            <div class="about-vcard about-vc-5 entrance" style="bottom: 20%; left: 10%;">
+              <i class="bi bi-file-earmark-slides"></i>
+              <span data-i18n="about_label_5">Présentations</span>
+            </div>
+            <div class="about-vcard about-vc-6 entrance" style="bottom: 5%; right: 15%;">
+              <i class="bi bi-printer"></i>
+              <span data-i18n="about_label_6">Imprimés</span>
+            </div>
+            <div class="about-vcard about-vc-7 entrance" style="top: 18%; left: 18%;">
+              <i class="bi bi-layers"></i>
+              <span data-i18n="about_label_7">UI/UX Design</span>
+            </div>
+            <div class="about-vcard about-vc-8 entrance" style="top: 55%; left: 38%;">
+              <i class="bi bi-film"></i>
+              <span data-i18n="about_label_8">Motion Design</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="section bg-dark-section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="badge bg-pink-subtle text-pink mb-3 px-3 py-2" data-i18n="skills_badge">Nos compétences</span>
+        <h2 class="section-title">
+          <span data-i18n="skills_title_before">Notre </span>
+          <span class="text-pink" data-i18n="skills_title_span">expertise</span>
+        </h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card entrance">
+          <i class="bi bi-instagram"></i>
+          <span data-i18n="skill_1">Réseaux sociaux</span>
+        </div>
+        <div class="skill-card entrance">
+          <i class="bi bi-brush"></i>
+          <span data-i18n="skill_2">Identité visuelle</span>
+        </div>
+        <div class="skill-card entrance">
+          <i class="bi bi-file-earmark-slides"></i>
+          <span data-i18n="skill_3">PowerPoint</span>
+        </div>
+        <div class="skill-card entrance">
+          <i class="bi bi-file-earmark-text"></i>
+          <span data-i18n="skill_4">Rapports & mémoires</span>
+        </div>
+        <div class="skill-card entrance">
+          <i class="bi bi-printer"></i>
+          <span data-i18n="skill_5">Produits imprimés</span>
+        </div>
+        <div class="skill-card entrance">
+          <i class="bi bi-filetype-pdf"></i>
+          <span data-i18n="skill_6">Fichiers pour impression</span>
+        </div>
+        <div class="skill-card entrance">
+          <i class="bi bi-tools"></i>
+          <span data-i18n="skill_7">Outils de design</span>
+        </div>
+        <div class="skill-card entrance">
+          <i class="bi bi-megaphone"></i>
+          <span data-i18n="skill_8">Communication</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section id="services" class="section bg-dark-section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="badge bg-pink-subtle text-pink mb-3 px-3 py-2" data-i18n="services_badge">Notre savoir-faire</span>
+        <h2 class="section-title">
+          <span data-i18n="services_title_before">Nos </span>
+          <span class="text-pink" data-i18n="services_title_span">Services</span>
+        </h2>
+      </div>
+      <div class="row g-4">
+        <!-- Services Numériques -->
+        <div class="col-lg-6">
+          <div class="service-category entrance">
+            <div class="service-category-header">
+              <i class="bi bi-laptop"></i>
+              <h3 data-i18n="service_digital_title">Services Numériques</h3>
+            </div>
+            <ul class="service-category-list">
+              <li>
+                <i class="bi bi-instagram"></i>
+                <div>
+                  <strong data-i18n="service_social_title">Social Media Design</strong>
+                  <span data-i18n="service_social_items">Publications • Stories & Reels • Couvertures • Vidéos
+                    simples</span>
+                </div>
+              </li>
+              <li>
+                <i class="bi bi-brush"></i>
+                <div>
+                  <strong data-i18n="service_brand_title">Identité Visuelle</strong>
+                  <span data-i18n="service_brand_items">Logo • Charte graphique • Branding</span>
+                </div>
+              </li>
+              <li>
+                <i class="bi bi-file-earmark-slides"></i>
+                <div>
+                  <strong data-i18n="service_ppt_title">Présentations PowerPoint</strong>
+                  <span data-i18n="service_ppt_items">Présentations pro • Rapports • Soutenances</span>
+                </div>
+              </li>
+            </ul>
+            <a href="projects.html?cat=digital" class="btn btn-sm btn-outline-pink mt-3"
+              data-i18n="service_see_projects">Voir nos projets</a>
+          </div>
+        </div>
+        <!-- Services Imprimés -->
+        <div class="col-lg-6">
+          <div class="service-category entrance">
+            <div class="service-category-header">
+              <i class="bi bi-printer"></i>
+              <h3 data-i18n="service_print_title">Services Imprimés</h3>
+            </div>
+            <ul class="service-category-list">
+              <li>
+                <i class="bi bi-journal"></i>
+                <div>
+                  <strong data-i18n="print_cat_1">Papeterie & Organisation</strong>
+                  <span data-i18n="print_cat_1_items">Carnets & Planners • Cahiers • Registres & carnets de vente</span>
+                </div>
+              </li>
+              <li>
+                <i class="bi bi-card-heading"></i>
+                <div>
+                  <strong data-i18n="print_cat_2">Cartes & Albums</strong>
+                  <span data-i18n="print_cat_2_items">Cartes de visite • Cartes de remerciement • Cartes d'invitation • Albums • Cadres</span>
+                </div>
+              </li>
+              <li>
+                <i class="bi bi-sticky"></i>
+                <div>
+                  <strong data-i18n="print_cat_3">Autres Créations</strong>
+                  <span data-i18n="print_cat_3_items">Stickers • Services sur demande</span>
+                </div>
+              </li>
+            </ul>
+            <a href="projects.html?cat=print" class="btn btn-sm btn-outline-pink mt-3"
+              data-i18n="service_see_projects">Voir nos projets</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section id="testimonials" class="section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="badge bg-pink-subtle text-pink mb-3 px-3 py-2" data-i18n="testim_badge">Témoignages</span>
+        <h2 class="section-title">
+          <span data-i18n="testim_title_before">Ce que </span>
+          <span class="text-pink" data-i18n="testim_title_span">nos clients disent</span>
+        </h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="testim-card entrance" style="animation-delay: 0s;">
+            <div class="testim-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+            <p class="testim-text" data-i18n="testim_1_text">"Rabbi mlih, service khir bzf. Taw jelly ta3ref tdir
+              design."</p>
+            <p class="testim-text testim-fr" data-i18n="testim_1_fr">— Service excellent, ils savent vraiment faire du
+              design.</p>
+            <div class="testim-author">
+              <span class="testim-name" data-i18n="testim_1_name">— Amina K.</span>
+              <span class="testim-role" data-i18n="testim_1_role">Entrepreneuse</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="testim-card entrance" style="animation-delay: 0.15s;">
+            <div class="testim-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+            <p class="testim-text" data-i18n="testim_2_text">"Wallah madjtouche, khdmah professionnelle w tarif hakkin."
+            </p>
+            <p class="testim-text testim-fr" data-i18n="testim_2_fr">— Rien à redire, travail pro et prix justes.</p>
+            <div class="testim-author">
+              <span class="testim-name" data-i18n="testim_2_name">— Mohamed L.</span>
+              <span class="testim-role" data-i18n="testim_2_role">Startup Founder</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="testim-card entrance" style="animation-delay: 0.3s;">
+            <div class="testim-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+            <p class="testim-text" data-i18n="testim_3_text">"Nsa7 bik bzf, kano professionnels mn lwl l tani."</p>
+            <p class="testim-text testim-fr" data-i18n="testim_3_fr">— Je vous le recommande, professionnels du début à
+              la fin.</p>
+            <div class="testim-author">
+              <span class="testim-name" data-i18n="testim_3_name">— Sara B.</span>
+              <span class="testim-role" data-i18n="testim_3_role">Coiffeuse</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="testim-card entrance" style="animation-delay: 0.45s;">
+            <div class="testim-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+            <p class="testim-text" data-i18n="testim_4_text">"Première fois njrb design, nta3hom fouq. barkallah fihom."
+            </p>
+            <p class="testim-text testim-fr" data-i18n="testim_4_fr">— Première expérience en design, ils sont au top.
+              Bravo.</p>
+            <div class="testim-author">
+              <span class="testim-name" data-i18n="testim_4_name">— Yassine D.</span>
+              <span class="testim-role" data-i18n="testim_4_role">Artisan</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section bg-dark-section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5">
+          <span class="badge bg-pink-subtle text-pink mb-3 px-3 py-2" data-i18n="contact_badge">Contactez-nous</span>
+          <h2 class="section-title">
+            <span data-i18n="contact_title_before">Créons </span>
+            <span class="text-pink" data-i18n="contact_title_span">ensemble</span>
+          </h2>
+          <p class="section-text" data-i18n="contact_text">
+            Donnez vie à vos idées avec des solutions créatives et professionnelles adaptées à vos besoins.
+          </p>
+          <p class="section-text" data-i18n="contact_text_2">
+            Pour toute demande d'information ou de devis, n'hésitez pas à nous contacter. Vous pouvez également nous
+            rejoindre sur nos réseaux sociaux pour suivre nos dernières réalisations et actualités.
+          </p>
+          <div class="contact-cards mt-4">
+            <div class="contact-card entrance">
+              <div class="contact-card-icon">
+                <i class="bi bi-envelope"></i>
+              </div>
+              <div>
+                <span class="contact-card-label" data-i18n="contact_email_label">Email</span>
+                <span class="contact-card-value">salsabilldesign27@gmail.com</span>
+              </div>
+            </div>
+            <div class="contact-card entrance">
+              <div class="contact-card-icon">
+                <i class="bi bi-whatsapp"></i>
+              </div>
+              <div>
+                <span class="contact-card-label">WhatsApp</span>
+                <span class="contact-card-value">0676453148</span>
+              </div>
+            </div>
+            <div class="contact-card entrance">
+              <div class="contact-card-icon">
+                <i class="bi bi-telegram"></i>
+              </div>
+              <div>
+                <span class="contact-card-label">Telegram</span>
+                <span class="contact-card-value">@salsabil_design</span>
+              </div>
+            </div>
+            <div class="contact-card entrance">
+              <div class="contact-card-icon">
+                <i class="bi bi-clock"></i>
+              </div>
+              <div>
+                <span class="contact-card-label" data-i18n="contact_hours_label">Horaires</span>
+                <span class="contact-card-value" data-i18n="contact_hours">Lun–Ven 9h–18h</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 offset-lg-1">
+          <div class="contact-social">
+            <p class="section-text mb-4" data-i18n="contact_social_text">
+              Envoyez-nous un message sur nos réseaux sociaux, nous vous répondrons rapidement.
+            </p>
+            <div class="contact-social-grid">
+              <a href="https://www.instagram.com/pixel.room.s?igsh=MWlydzZmbmZveTllbg==" target="_blank" class="contact-social-item entrance">
+                <i class="fab fa-instagram"></i>
+                <span>Instagram</span>
+              </a>
+              <a href="https://www.facebook.com/share/1JdRksztov" target="_blank" class="contact-social-item entrance">
+                <i class="fab fa-facebook-f"></i>
+                <span>Facebook</span>
+              </a>
+              <a href="https://www.linkedin.com/company/pixelroom-sk/" target="_blank"
+                class="contact-social-item entrance">
+                <i class="fab fa-linkedin-in"></i>
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://wa.me/212676453148" target="_blank" class="contact-social-item entrance">
+                <i class="fab fa-whatsapp"></i>
+                <span>WhatsApp</span>
+              </a>
+              <a href="https://t.me/salsabil_design" target="_blank" class="contact-social-item entrance">
+                <i class="fab fa-telegram-plane"></i>
+                <span>Telegram</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row gy-5">
+        <!-- Brand -->
+        <div class="col-lg-3 col-md-6">
+          <a class="navbar-brand" href="#">
+            <img class="brand-logo" src="images/1.png" alt="Pixel Room" width="35" height="43">
+          </a>
+          <p class="footer-text small mt-3 mb-3 opacity-75" data-i18n="footer_desc">
+            Design graphique, branding, web et print — nous donnons vie à vos projets créatifs.
+          </p>
+          <div class="social-links justify-content-start">
+            <a href="https://www.instagram.com/pixel.room.s?igsh=MWlydzZmbmZveTllbg==" target="_blank" class="social-link"
+              aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/share/1JdRksztov" target="_blank" class="social-link"
+              aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/212676453148" target="_blank" class="social-link"
+              aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://t.me/salsabil_design" target="_blank" class="social-link"
+              aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+            <a href="https://www.linkedin.com/company/pixelroom-sk/" target="_blank" class="social-link"
+              aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <!-- Navigation -->
+        <div class="col-lg-3 col-md-6">
+          <h6 class="footer-heading" data-i18n="footer_nav">Navigation</h6>
+          <ul class="footer-links list-unstyled mb-0">
+            <li><a href="#hero" data-i18n="nav_home">Accueil</a></li>
+            <li><a href="#about" data-i18n="nav_about">À propos</a></li>
+            <li><a href="#skills" data-i18n="nav_skills">Compétences</a></li>
+            <li><a href="#services" data-i18n="nav_services">Services</a></li>
+            <li><a href="projects.html" data-i18n="nav_work">Projets</a></li>
+            <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Services -->
+        <div class="col-lg-3 col-md-6">
+          <h6 class="footer-heading" data-i18n="footer_services">Services</h6>
+          <ul class="footer-links list-unstyled mb-0">
+            <li><a href="#services" data-i18n="service_digital_title">Services Numériques</a></li>
+            <li><a href="#services" data-i18n="service_social_title">Social Media</a></li>
+            <li><a href="#services" data-i18n="service_brand_title">Identité Visuelle</a></li>
+            <li><a href="#services" data-i18n="service_ppt_title">PowerPoint</a></li>
+            <li><a href="#services" data-i18n="service_print_title">Services Imprimés</a></li>
+          </ul>
+        </div>
+        <!-- Contact -->
+        <div class="col-lg-3 col-md-6">
+          <h6 class="footer-heading" data-i18n="nav_contact">Contact</h6>
+          <ul class="footer-contact list-unstyled mb-0 small">
+            <li><i class="fas fa-envelope me-2 text-pink"></i> salsabilldesign27@gmail.com</li>
+            <li><i class="fab fa-whatsapp me-2 text-pink"></i> 0676453148</li>
+            <li><i class="fab fa-telegram-plane me-2 text-pink"></i> @salsabil_design</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="my-4 opacity-25">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p class="mb-0 small opacity-75" data-i18n="footer_copyright">&copy; 2026 Pixel Room. Tous droits réservés.
+          </p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a href="#" class="small opacity-75 text-decoration-none me-3 footer-bottom-link"
+            data-i18n="footer_privacy">Politique de confidentialité</a>
+          <a href="#" class="small opacity-75 text-decoration-none footer-bottom-link"
+            data-i18n="footer_terms">Conditions d'utilisation</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

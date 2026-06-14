@@ -1,0 +1,223 @@
+/* ===== Projects Hero ===== */
+.projects-hero {
+  padding: 8rem 0 3rem;
+  text-align: center;
+}
+
+.projects-hero-title {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+}
+
+.projects-hero-text {
+  font-size: 1.05rem;
+  color: var(--text-muted-custom);
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* ===== Filter Tabs ===== */
+.projects-filter {
+  padding: 1rem 0 2rem;
+}
+
+.filter-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
+  color: var(--bs-body-color);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  border-color: var(--bs-pink);
+  color: var(--bs-pink);
+}
+
+.filter-btn.active {
+  background: var(--bs-pink);
+  border-color: var(--bs-pink);
+  color: #fff;
+}
+
+/* ===== Project Card ===== */
+.projects-grid-section {
+  padding: 0 0 5rem;
+}
+
+.project-card {
+  border-radius: 18px;
+  overflow: hidden;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(105, 56, 113, 0.1);
+  border-color: rgba(105, 56, 113, 0.2);
+}
+
+.project-card-img {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.project-card-body {
+  padding: 1.5rem;
+}
+
+.project-card-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--bs-pink);
+  background: rgba(105, 56, 113, 0.08);
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  margin-bottom: 0.75rem;
+}
+
+.project-card-body h5 {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-card-body p {
+  font-size: 0.9rem;
+  color: var(--text-muted-custom);
+  margin: 0;
+}
+
+/* ===== Filter Animation ===== */
+.project-item {
+  transition: all 0.4s ease;
+}
+
+.project-item.hidden {
+  display: none;
+}
+
+/* ===== Dark mode overrides ===== */
+[data-bs-theme="dark"] .project-card {
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+[data-bs-theme="dark"] .filter-btn {
+  background: var(--card-bg);
+  border-color: var(--card-border);
+}
+
+[data-bs-theme="dark"] .projects-hero {
+  background: transparent;
+}
+
+/* ===== Lightbox ===== */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  cursor: pointer;
+  padding: 2rem;
+}
+
+.lightbox.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  cursor: default;
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+.lightbox.active img {
+  transform: scale(1);
+}
+
+.lightbox-close {
+  position: fixed;
+  top: 1rem;
+  right: 1.5rem;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  background: none;
+  border: none;
+  z-index: 10000;
+}
+
+.lightbox-close:hover {
+  opacity: 1;
+}
+
+.project-card-img {
+  cursor: pointer;
+}
+
+/* ===== Lightbox Arrows ===== */
+.lightbox-arrow {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10001;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: #fff;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.lightbox-arrow:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.lightbox-prev {
+  left: 1rem;
+}
+
+.lightbox-next {
+  right: 1rem;
+}

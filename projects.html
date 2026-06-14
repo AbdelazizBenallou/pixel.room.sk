@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fr" data-bs-theme="light" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projets — Pixel Room | SALSABIL DESIGN</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preload" href="css/style.css" as="style" />
+  <link rel="preload" href="css/projects.css" as="style" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/projects.css" />
+</head>
+
+<body>
+
+  <!-- ===== FLOATING NAVBAR ===== -->
+  <nav class="navbar floating-navbar navbar-expand-lg" id="mainNavbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img class="brand-logo" src="images/1.png" alt="Pixel Room" width="35" height="52">
+        <span>Pixel Room</span>
+      </a>
+
+      <ul class="navbar-nav mx-auto d-none d-lg-flex gap-1" id="navLinks">
+        <li class="nav-item"><a class="nav-link" href="index.html" data-i18n="nav_home">Accueil</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#about" data-i18n="nav_about">À propos</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#skills" data-i18n="nav_skills">Compétences</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#services" data-i18n="nav_services">Services</a></li>
+        <li class="nav-item"><a class="nav-link active" href="projects.html" data-i18n="nav_work">Projets</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#contact" data-i18n="nav_contact">Contact</a></li>
+      </ul>
+
+      <div class="d-flex align-items-center gap-2">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">
+          <i class="bi bi-sun-fill"></i>
+        </button>
+        <button class="lang-btn" id="langToggle" aria-label="Toggle language">AR</button>
+        <button class="icon-btn d-lg-none" id="menuToggle" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#mobileMenu" aria-label="Toggle menu">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== OFFCANVAS DRAWER ===== -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="mobileMenuLabel">Pixel Room<br><small>SALSABIL DESIGN</small></h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <ul class="nav flex-column gap-2 mb-4">
+        <li class="nav-item"><a class="nav-link mobile-link" href="index.html"
+            data-i18n="nav_home">Accueil</a></li>
+        <li class="nav-item"><a class="nav-link mobile-link" href="index.html#about"
+            data-i18n="nav_about">À propos</a></li>
+        <li class="nav-item"><a class="nav-link mobile-link" href="index.html#skills"
+            data-i18n="nav_skills">Compétences</a></li>
+        <li class="nav-item"><a class="nav-link mobile-link" href="index.html#services"
+            data-i18n="nav_services">Services</a></li>
+        <li class="nav-item"><a class="nav-link mobile-link active" href="projects.html"
+            data-i18n="nav_work">Projets</a></li>
+        <li class="nav-item"><a class="nav-link mobile-link" href="index.html#contact"
+            data-i18n="nav_contact">Contact</a></li>
+      </ul>
+      <div class="mt-auto">
+        <div class="d-flex gap-3 mb-3">
+          <button class="icon-btn lg" id="mobileThemeToggle">
+            <i class="bi bi-sun-fill"></i>
+          </button>
+          <button class="lang-btn" id="mobileLangToggle">AR</button>
+        </div>
+        <div class="drawer-social">
+          <a href="https://www.instagram.com/pixel.room.s?igsh=MWlydzZmbmZveTllbg==" target="_blank"
+            class="drawer-social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/share/1JdRksztov" target="_blank" class="drawer-social-link"
+            aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://wa.me/212676453148" target="_blank" class="drawer-social-link" aria-label="WhatsApp"><i
+              class="fab fa-whatsapp"></i></a>
+          <a href="https://t.me/salsabil_design" target="_blank" class="drawer-social-link" aria-label="Telegram"><i
+              class="fab fa-telegram-plane"></i></a>
+          <a href="https://www.linkedin.com/company/pixelroom-sk/" target="_blank" class="drawer-social-link"
+            aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section class="projects-hero">
+    <div class="container text-center">
+      <span class="badge bg-pink-subtle text-pink mb-3 px-3 py-2" data-i18n="work_badge">Nos réalisations</span>
+      <h1 class="projects-hero-title">
+        <span data-i18n="projects_title_before">Explorez </span>
+        <span class="text-pink" data-i18n="projects_title_span">nos projets</span>
+      </h1>
+      <p class="projects-hero-text" data-i18n="projects_hero_text">
+        Découvrez une sélection de nos créations, du digital à l'imprimé.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== FILTER TABS ===== -->
+  <section class="projects-filter">
+    <div class="container">
+      <div class="filter-tabs" id="filterTabs">
+        <button class="filter-btn active" data-filter="all" data-i18n="projects_all">Tous</button>
+        <button class="filter-btn" data-filter="digital" data-i18n="service_digital_title">Numériques</button>
+        <button class="filter-btn" data-filter="print" data-i18n="service_print_title">Imprimés</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS GRID ===== -->
+  <section class="projects-grid-section">
+    <div class="container">
+      <div class="row g-4" id="projectsGrid">
+
+        <!-- Digital Projects -->
+        <div class="col-md-6 col-lg-4 project-item" data-category="digital">
+          <div class="project-card entrance" data-images="images/pooster.jpg">
+            <div class="project-card-img" style="background: url('images/pooster.jpg') center/cover no-repeat;">
+              <i class="bi bi-instagram"></i>
+            </div>
+            <div class="project-card-body">
+              <span class="project-card-badge" data-i18n="service_social_title">Social Media</span>
+              <h5 data-i18n="proj_digital_1">Feed Instagram</h5>
+              <p data-i18n="proj_digital_1_desc">Design de publications et stories pour une marque de mode.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Print Projects -->
+        <div class="col-md-6 col-lg-4 project-item" data-category="print">
+          <div class="project-card entrance" data-images="images/planner-1.jpg,images/planner-2.jpg">
+            <div class="project-card-img" style="background: url('images/planner-1.jpg') center/cover no-repeat;">
+              <i class="bi bi-journal"></i>
+            </div>
+            <div class="project-card-body">
+              <span class="project-card-badge" data-i18n="sprint_1">Carnets & Planners</span>
+              <h5 data-i18n="proj_print_1">Planner 2026</h5>
+              <p data-i18n="proj_print_1_desc">Carnet de planning personnalisé, reliure couvrante.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 project-item" data-category="print">
+          <div class="project-card entrance">
+            <div class="project-card-img" style="background:  url('images/carte-visite.jpg') center/cover no-repeat;">
+              <i class="bi bi-card-heading"></i>
+            </div>
+            <div class="project-card-body">
+              <span class="project-card-badge" data-i18n="sprint_2">Cartes de visite</span>
+              <h5 data-i18n="proj_print_2">Cartes Luxe</h5>
+              <p data-i18n="proj_print_2_desc">Cartes de visite premium avec dorure et finition mate.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 project-item" data-category="print">
+          <div class="project-card entrance" data-images="images/sticker.jpg">
+            <div class="project-card-img" style="background: url('images/sticker.jpg') center/cover no-repeat;">
+              <i class="bi bi-sticky"></i>
+            </div>
+            <div class="project-card-body">
+              <span class="project-card-badge" data-i18n="sprint_4">Stickers</span>
+              <h5 data-i18n="proj_print_3">Stickers Pack</h5>
+              <p data-i18n="proj_print_3_desc">Autocollants personnalisés pour une boutique en ligne.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 project-item" data-category="print">
+          <div class="project-card entrance" data-images="images/album.jpg,images/album-1.jpg,images/album-3.jpg">
+            <div class="project-card-img" style="background: url('images/album.jpg') center/cover no-repeat;">
+              <i class="bi bi-images"></i>
+            </div>
+            <div class="project-card-body">
+              <span class="project-card-badge" data-i18n="sprint_5">Albums</span>
+              <h5 data-i18n="proj_print_4">Album Mariage</h5>
+              <p data-i18n="proj_print_4_desc">Album photo personnalisé, couverture rigide.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 project-item" data-category="print">
+          <div class="project-card entrance"
+            data-images="images/carnet-1.jpg,images/carnet-2.jpg,images/carnet-11.jpg,images/carnet-22.jpg">
+            <div class="project-card-img" style="background: url('images/carnet-1.jpg') center/cover no-repeat;">
+              <i class="bi bi-receipt"></i>
+            </div>
+            <div class="project-card-body">
+              <span class="project-card-badge" data-i18n="sprint_6">Registres & Carnets</span>
+              <h5 data-i18n="proj_print_6">Registre de vente</h5>
+              <p data-i18n="proj_print_6_desc">Carnet de vente personnalisé pour commerce.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 project-item" data-category="print">
+          <div class="project-card entrance" data-images="images/carte-inv.jpg, images/carte.jpg">
+            <div class="project-card-img" style="background: url('images/carte-inv.jpg') center/cover no-repeat;">
+              <i class="bi bi-envelope-open"></i>
+            </div>
+            <div class="project-card-body">
+              <span class="project-card-badge" data-i18n="sprint_10">Cartes d'invitation</span>
+              <h5 data-i18n="proj_print_7">Carte Invitation</h5>
+              <p data-i18n="proj_print_7_desc">Carte d'invitation personnalisée pour vos événements.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row gy-5">
+        <!-- Brand -->
+        <div class="col-lg-3 col-md-6">
+          <a class="navbar-brand" href="index.html">
+            <img class="brand-logo" src="images/1.png" alt="Pixel Room" width="35" height="43">
+          </a>
+          <p class="footer-text small mt-3 mb-3 opacity-75" data-i18n="footer_desc">
+            Design graphique, branding, web et print — nous donnons vie à vos projets créatifs.
+          </p>
+          <div class="social-links justify-content-start">
+            <a href="https://www.instagram.com/pixel.room.s?igsh=MWlydzZmbmZveTllbg==" target="_blank"
+              class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/share/1JdRksztov" target="_blank" class="social-link"
+              aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/212676453148" target="_blank" class="social-link" aria-label="WhatsApp"><i
+                class="fab fa-whatsapp"></i></a>
+            <a href="https://t.me/salsabil_design" target="_blank" class="social-link" aria-label="Telegram"><i
+                class="fab fa-telegram-plane"></i></a>
+            <a href="https://www.linkedin.com/company/pixelroom-sk/" target="_blank" class="social-link"
+              aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <!-- Navigation -->
+        <div class="col-lg-3 col-md-6">
+          <h6 class="footer-heading" data-i18n="footer_nav">Navigation</h6>
+          <ul class="footer-links list-unstyled mb-0">
+            <li><a href="index.html" data-i18n="nav_home">Accueil</a></li>
+            <li><a href="projects.html" data-i18n="nav_work">Projets</a></li>
+            <li><a href="index.html#services" data-i18n="nav_services">Services</a></li>
+            <li><a href="index.html#contact" data-i18n="nav_contact">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Services -->
+        <div class="col-lg-3 col-md-6">
+          <h6 class="footer-heading" data-i18n="footer_services">Services</h6>
+          <ul class="footer-links list-unstyled mb-0">
+            <li><a href="index.html#services" data-i18n="service_digital_title">Services Numériques</a></li>
+            <li><a href="index.html#services" data-i18n="service_print_title">Services Imprimés</a></li>
+          </ul>
+        </div>
+        <!-- Contact -->
+        <div class="col-lg-3 col-md-6">
+          <h6 class="footer-heading" data-i18n="nav_contact">Contact</h6>
+          <ul class="footer-contact list-unstyled mb-0 small">
+            <li><i class="fas fa-envelope me-2 text-pink"></i> salsabilldesign27@gmail.com</li>
+            <li><i class="fab fa-whatsapp me-2 text-pink"></i> 0676453148</li>
+            <li><i class="fab fa-telegram-plane me-2 text-pink"></i> @salsabil_design</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="my-4 opacity-25">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p class="mb-0 small opacity-75" data-i18n="footer_copyright">&copy; 2026 Pixel Room. Tous droits réservés.
+          </p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a href="#" class="small opacity-75 text-decoration-none me-3 footer-bottom-link"
+            data-i18n="footer_privacy">Politique de confidentialité</a>
+          <a href="#" class="small opacity-75 text-decoration-none footer-bottom-link"
+            data-i18n="footer_terms">Conditions d'utilisation</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/projects.js"></script>
+</body>
+
+</html>
